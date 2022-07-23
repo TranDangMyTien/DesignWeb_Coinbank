@@ -1,0 +1,32 @@
+.flex{
+    display : flex;
+}
+div img{
+    width : 100%;
+}
+.left{
+    width: 25%;
+}
+.right{
+    width: 25%;
+    background-color: orange;
+}
+.center{
+    width: 50%;
+}
+ul {
+    list-style-type:none;
+}
+body{
+    margin : 0;
+}
+div.center{
+    background-color:orange;
+}
+div h1{
+    text-align: center;
+    color: white;
+}
+header{
+
+}
