@@ -43,23 +43,61 @@ main{
     text-transform: uppercase;
     letter-spacing: 4px;
 }
-nav {
+.logo > img {
+  max-width: 100%;
+  max-height: 100%;
+
+}
+nav#header{
     display: flex;
     justify-content: space-around;
     font-family: 'Open Sans', sans-serif;
     background: var(--main-color);
-    height: 8vh;
+    height: auto;
    
 }
 .nav-list {
     list-style: none;
     display: flex;
 }
+
 .nav-list li{
+    padding: 0;
+    margin: 0;
+}
+.nav-list li a{
     letter-spacing: 3px;
     margin-left: 32px;
     text-align: center;
-    padding-top:10px;
+    padding: 11.5px 10px;
+    margin: auto;
+    
+}
+.nav-list li:hover a{
+    background: var(--sub-color);
+    transition: all 0.3s;
+    width: auto;
+}
+
+#toggle{
+    display: none;
+    background: var(--sub-color);
+    color: var(--text-color);
+    text-align: right;
+    padding: 10px 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px){
+    nav#header{
+        flex-direction: column;
+    }
+    #toggle{
+        display: block;
+    }
+    .nav-list{
+        display: none;
+    }
 }
 .logo{
     display:flex;
