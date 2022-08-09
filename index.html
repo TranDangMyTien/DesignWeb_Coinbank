@@ -138,39 +138,53 @@
                 <p>+ Mua: USA (23,240), EUR (23,377), GBP (27,708), HKD (2,922), CHF (23,873)</p>
                 <p>+ Bán: USA (23,525), EUR (24,236), GBP (28,539), HKD (3,024), CHF (24,618)</p>
             </div>
-            <div class="container-cal about-item">
-                <p>Máy tính (Calculate)</p>
-                <div class="screen">
-                    <span class="overlay"></span>
-                    <span class="input"></span>
-                </div>
-                <div class="keyboard">
-                    <button class="itm itm1">AC</button>
-                    <button class="itm itm2">DEL</button>
-                    <button class="itm itm3">+</button>
-                    <button class="itm itm4">7</button>
-                    <button class="itm itm5">8</button>
-                    <button class="itm itm6">9</button>
-                    <button class="itm itm7">-</button>
-                    <button class="itm itm8">4</button>
-                    <button class="itm itm9">5</button>
-                    <button class="itm itm10">6</button>
-                    <button class="itm itm11">*</button>
-                    <button class="itm itm12">1</button>
-                    <button class="itm itm13">2</button>
-                    <button class="itm itm14">3</button>
-                    <button class="itm itm15">/</button>
-                    <button class="itm itm16">0</button>
-                    <button class="itm itm17">00</button>
-                    <button class="itm itm18">.</button>
-                    <button class="itm itm19">=</button>
+            
+            <div id="container">
+                <div class="calculator">
+                        <div class="result">
+                            <div class="history">
+                                <p id="history-value"></p>
+                            </div>
+                            <div class="output">
+                                <p id="output-value"></p>
+                            </div>
+                        </div>
+                        <div class="keyboard">
+                            <button class="operation" id="clear">C</button>
+                            <button class="operation" id="backspace">CE</button>
+                            <button class="operation" id="%">%</button>
+                            <button class="operation" id="/">/</button>
+
+                            <button class="number" id="7">7</button>
+                            <button class="number" id="8">8</button>
+                            <button class="number" id="9">9</button>
+                            <button class="operation" id="*">*</button>
+
+                            <button class="number" id="4">4</button>
+                            <button class="number" id="5">5</button>
+                            <button class="number" id="6">6</button>
+                            <button class="operation" id="-">-</button>
+
+                            <button class="number" id="1">1</button>
+                            <button class="number" id="2">2</button>
+                            <button class="number" id="3">3</button>
+                            <button class="operation" id="+">+</button>
+
+                            <button class="empty" id="empty"></button>
+                            <button class="number" id="0">0</button>
+                            <button class="empty" id="empty"></button>
+                            <button class="operation" id="=">=</button>
+
+                        </div>
                 </div>
             </div>
+            
+            
         </section>
     </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
     <script src="/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-    
 </body>
- <script  src="/myscript.js"></script>
+<script  src="/myscript.js"></script>
 </html>
