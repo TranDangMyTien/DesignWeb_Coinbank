@@ -9,13 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="TDMT and LCTT">
     <link href="Logo/Icon_Logo.png" rel="shortcut icon" />
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/DesignWeb_Coinbank/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
     integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/DesignWeb_Coinbank/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/DesignWeb_Coinbank/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
     <title>Coinbank</title>
 </head>
 <body>
@@ -26,6 +26,7 @@
             });
         })
     </script>
+    <!-- Thanh Menu -->
     <header id="top">
         <nav id="header">
             <div class="logo">
@@ -36,14 +37,17 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
             <ul class="nav-list">
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Khách hàng cá nhân</a></li>
-                <li><a href="#">Nhóm khách hàng</a></li>
-                <li><a href="/index.html">Phản hồi</a></li>
+                <li><a href="/index.html" target="_blank">Trang chủ</a>
+                </li>
+                <li><a href="/canhan.html" target="_blank">Khách hàng cá nhân</a></li>
+                <li><a href="#">Khách hàng doanh nghiệp</a></li>
+                <li><a href="/Feedback.html" target="_blank">Phản hồi</a></li>
                 <li><a href="#">Đăng nhập/ký</a></li>
             </ul>
         </nav>
     </header>
+    <!-- CÁC SECTION -->
+    <!-- SECTION 1 -->
     <section class="big-image">
         <div class="big-image-content">
             <h2>
@@ -52,12 +56,11 @@
             <p>
                 Nâng cao giá trị, hướng đến tự do tài chính
             </p>
-            <button class="big-image-content-btn btn"><a href="#about-us"> ABOUT US </a>
-               
-            </button>
+            <button class="big-image-content-btn btn"><a href="#about-us"> ABOUT US </a></button>
         </div>
     </section>
-    <section class="about .section-pading" id="about-us">
+    <!-- SECTION 2 -->
+    <section class="about .section-padding" id="about-us">
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -82,6 +85,7 @@
             </div>
         </div>
     </section>
+    <!-- SECTION 3   -->
     <section class="dichvu" id="dichvu">
         <div class="row two">
             <div class="section-title">
@@ -119,6 +123,9 @@
             </div>
         </section>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src="/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <!-- SECTION 4 -->
     <div id="calculate">
         <div class="row">
             <div class="section-title">
@@ -138,50 +145,65 @@
                 <p>+ Mua: USA (23,240), EUR (23,377), GBP (27,708), HKD (2,922), CHF (23,873)</p>
                 <p>+ Bán: USA (23,525), EUR (24,236), GBP (28,539), HKD (3,024), CHF (24,618)</p>
             </div>
-            
-            <div id="container">
-                <div class="calculator">
-                        <div class="result">
-                            <div class="history">
-                                <p id="history-value"></p>
-                            </div>
-                            <div class="output">
-                                <p id="output-value"></p>
-                            </div>
+    <!-- MÁY TÍNH -->
+            <div class="calculator">
+                <form action="#" name="form">
+                    <div class="result">
+                        <input type="text" name="disp" id="disp">
+                    </div>
+                    <div class="buttons">
+                        <div class="row">
+                            <input type="button" value="7" name="v7" onclick="val(v7.value)">
+                            <input type="button" value="8" name="v8" onclick="val(v8.value)">
+                            <input type="button" value="9" name="v9" onclick="val(v9.value)">
+                            <input type="button" value="+" name="add" onclick="val(add.value)">
                         </div>
-                        <div class="keyboard">
-                            <button class="operation" id="clear">C</button>
-                            <button class="operation" id="backspace">CE</button>
-                            <button class="operation" id="%">%</button>
-                            <button class="operation" id="/">/</button>
-
-                            <button class="number" id="7">7</button>
-                            <button class="number" id="8">8</button>
-                            <button class="number" id="9">9</button>
-                            <button class="operation" id="*">*</button>
-
-                            <button class="number" id="4">4</button>
-                            <button class="number" id="5">5</button>
-                            <button class="number" id="6">6</button>
-                            <button class="operation" id="-">-</button>
-
-                            <button class="number" id="1">1</button>
-                            <button class="number" id="2">2</button>
-                            <button class="number" id="3">3</button>
-                            <button class="operation" id="+">+</button>
-
-                            <button class="empty" id="empty"></button>
-                            <button class="number" id="0">0</button>
-                            <button class="empty" id="empty"></button>
-                            <button class="operation" id="=">=</button>
-
+                        <div class="row">
+                            <input type="button" value="4" name="v4" onclick="val(v4.value)">
+                            <input type="button" value="5" name="v5" onclick="val(v5.value)">
+                            <input type="button" value="6" name="v6" onclick="val(v6.value)">
+                            <input type="button" value="-" name="sub" onclick="val(sub.value)">
                         </div>
-                </div>
+                        <div class="row">
+                            <input type="button" value="1" name="v1" onclick="val(v1.value)">
+                            <input type="button" value="2" name="v2" onclick="val(v2.value)">
+                            <input type="button" value="3" name="v3" onclick="val(v3.value)">
+                            <input type="button" value="*" name="mul" onclick="val(mul.value)">
+                        </div>
+                        <div class="row">
+                            <input type="button" value="0" name="v0" onclick="val(v0.value)">
+                            <input type="button" value="." name="vdot" onclick="val(vdot.value)">
+                            <input type="button" value="/" name="vdiv" onclick="val(vdiv.value)">
+                            <input type="button" title="Click two times to clear result" value="=" name="veql" onclick="calculate()">
+                        </div>
+                    </div>
+                </form>
             </div>
-            
-            
+
+            <script>
+                function val(result){
+                    form.disp.value = form.disp.value + result;
+                }
+                
+                function calculate(){
+                    if (form.disp.value == ""){
+                        alert("Plase enter numbers");
+                        // Đoạn này thông báo user nếu họ k nhập số
+                        // Mà nhập dấu = thì sẽ xuất hiện thông báo
+                    }
+                    else {
+                        form.disp.value = eval (form.disp.value);
+                    }
+                }
+                var btn = form.veql;
+                btn.addEventListener('dblclick', function(){
+                    form.disp.value = "";
+                })
+                // Do ban đầu mình k có nút Clear, nên mình tư duy theo dạng nếu User muốn Clear, thì họ sẽ phải bấm 2 lần dấu = 
+            </script>
         </section>
     </div>
+    <!-- FOOTER -->
     <footer>
         <div class="footer-content">
             <h3><strong>COINBANK</strong></h3>
@@ -199,9 +221,9 @@
             <p>coppyright &copy; 2022 COINBANK. Design by <span>TDMT</span></p>
         </div>
     </footer>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
     <script src="/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 </body>
-<script  src="/myscript.js"></script>
+<script  src="/DesignWeb_Coinbank/myscript.js"></script>
 </html>
